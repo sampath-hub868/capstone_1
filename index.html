@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Text-based interview practice with AI-inspired evaluation and skill gap analysis.">
+  <title>SkillLens | AI Interview Evaluation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#top" aria-label="SkillLens home"><span class="brand-mark">S</span><span>skill<span>lens</span></span></a>
+      <div class="sidebar-label">Workspace</div>
+      <nav class="nav-list" aria-label="Main navigation">
+        <a class="nav-link active" href="#practice"><span class="nav-icon">✦</span>Practice room</a>
+        <a class="nav-link" href="#history"><span class="nav-icon">◷</span>Session history</a>
+        <a class="nav-link" href="#method"><span class="nav-icon">⌁</span>How it works</a>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="mini-avatar">AP</div>
+        <div><strong>Alex Patel</strong><small>Candidate workspace</small></div>
+        <button class="icon-button" title="Workspace settings" aria-label="Workspace settings">•••</button>
+      </div>
+    </aside>
+
+    <main id="top" class="main-content">
+      <header class="topbar">
+        <div><p class="eyebrow">INTERVIEW LAB / 01</p><h1>Practice with purpose.</h1></div>
+        <div class="topbar-actions"><span class="status-dot">● <span>Evaluation engine ready</span></span><button class="outline-button" id="clearHistory">Clear history</button></div>
+      </header>
+
+      <section id="practice" class="hero-grid">
+        <div class="intro-panel">
+          <div class="intro-copy"><span class="section-kicker">AI-powered practice</span><h2>Make every answer<br><em>count.</em></h2><p>Write like you are in the interview. SkillLens examines your answer for relevance, technical depth, clarity, and completeness.</p></div>
+          <div class="signal-row"><div><strong>06</strong><span>evaluation signals</span></div><div><strong>03</strong><span>role pathways</span></div><div><strong>∞</strong><span>practice attempts</span></div></div>
+        </div>
+        <div class="setup-card">
+          <div class="card-heading"><div><span class="section-kicker">Start a session</span><h3>Choose your pathway</h3></div><span class="step-count">01 / 03</span></div>
+          <label for="roleSelect">Target role</label>
+          <select id="roleSelect"><option value="frontend">Frontend Engineer</option><option value="backend">Backend Engineer</option><option value="data">Data Analyst</option></select>
+          <div class="role-preview" id="rolePreview"></div>
+          <button class="primary-button" id="startButton">Enter practice room <span>→</span></button>
+        </div>
+      </section>
+
+      <section id="questionSection" class="practice-section hidden">
+        <div class="section-heading"><div><span class="section-kicker">Practice room</span><h2 id="questionLabel">Question 01</h2></div><div class="progress-meta"><span id="progressText">1 of 3</span><div class="progress-track"><div id="progressBar"></div></div></div></div>
+        <div class="question-layout">
+          <article class="question-card"><div class="question-meta"><span id="questionCategory">Technical foundations</span><span id="questionTime">Suggested time · 3 min</span></div><h3 id="questionText"></h3><div class="answer-guidance"><span>◎</span><p>Strong answers usually define the concept, explain the trade-off, and give a concrete example.</p></div></article>
+          <div class="answer-panel"><label for="answerInput">Your answer</label><textarea id="answerInput" placeholder="Take a moment to structure your thoughts..." maxlength="2000"></textarea><div class="answer-footer"><span id="charCount">0 / 2000</span><button class="primary-button" id="evaluateButton">Save answer &amp; next <span>→</span></button></div></div>
+        </div>
+      </section>
+
+      <section id="resultsSection" class="results-section hidden">
+        <div class="section-heading"><div><span class="section-kicker">Evaluation complete</span><h2>Your performance snapshot</h2></div><button class="outline-button" id="newSession">New session</button></div>
+        <div class="results-grid"><div class="score-card"><div class="score-ring"><span id="overallScore">0</span><small>/100</small></div><span class="score-label">Overall session score</span><p id="scoreSummary"></p></div><div class="breakdown-card"><div class="card-heading"><div><span class="section-kicker">Session breakdown</span><h3>What the engine heard</h3></div><span class="tiny-note" id="answerCount">3 answers</span></div><div id="breakdownList"></div></div></div>
+        <div class="feedback-grid"><div class="feedback-card strengths"><span class="section-kicker">Keep building on</span><h3>Strengths</h3><ul id="strengthsList"></ul></div><div class="feedback-card gaps"><span class="section-kicker">Focus next</span><h3>Skill gaps</h3><ul id="gapsList"></ul></div><div class="feedback-card next-steps"><span class="section-kicker">Suggested study</span><h3>Next steps</h3><div id="recommendationsList"></div></div></div>
+      </section>
+
+      <section id="history" class="history-section"><div class="section-heading"><div><span class="section-kicker">Your practice trail</span><h2>Session history</h2></div><span class="tiny-note" id="historyCount">0 sessions</span></div><div class="history-table-wrap"><table><thead><tr><th>Role</th><th>Question</th><th>Score</th><th>Signal</th><th>Date</th></tr></thead><tbody id="historyBody"><tr class="empty-row"><td colspan="5">Complete an evaluation to start your practice trail.</td></tr></tbody></table></div></section>
+
+      <section id="method" class="method-section"><div><span class="section-kicker">A transparent approach</span><h2>Useful feedback,<br>not mystery scores.</h2></div><div class="method-copy"><p>SkillLens combines rubric-based checks with language similarity. It looks for the ideas that matter, then turns the result into a practical next step.</p><div class="method-steps"><div><b>01</b><span>Understand<br>the prompt</span></div><div><b>02</b><span>Compare<br>key concepts</span></div><div><b>03</b><span>Recommend<br>what to learn</span></div></div></div></section>
+      <footer><span>SKILLLENS · CAPSTONE PROTOTYPE</span><span>Text evaluation for better interviews</span></footer>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

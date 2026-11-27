@@ -1,0 +1,35 @@
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 104-406-312
+127.0.0.1 - - [22/Sep/2026 09:53:04] "GET /api/health HTTP/1.1" 200 -
+127.0.0.1 - - [22/Sep/2026 09:53:57] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [22/Sep/2026 09:53:57] "GET /styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [22/Sep/2026 09:53:57] "GET /app.js HTTP/1.1" 200 -
+127.0.0.1 - - [22/Sep/2026 09:53:59] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [22/Sep/2026 09:54:06] "GET /api/questions?role=data HTTP/1.1" 200 -
+127.0.0.1 - - [22/Sep/2026 09:55:29] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [22/Sep/2026 09:55:29] "GET /styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [22/Sep/2026 09:55:29] "GET /app.js HTTP/1.1" 304 -
+127.0.0.1 - - [22/Sep/2026 09:55:30] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [22/Sep/2026 10:04:26] "GET /api/health HTTP/1.1" 200 -
+127.0.0.1 - - [22/Sep/2026 10:04:26] "GET /api/questions?role=frontend HTTP/1.1" 200 -
+127.0.0.1 - - [22/Sep/2026 11:30:06] "GET /api/questions?role=backend HTTP/1.1" 200 -
+127.0.0.1 - - [22/Sep/2026 11:33:06] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [22/Sep/2026 11:33:06] "GET /styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [22/Sep/2026 11:33:06] "GET /app.js HTTP/1.1" 200 -
+127.0.0.1 - - [22/Sep/2026 11:33:06] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [22/Sep/2026 11:33:27] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [22/Sep/2026 11:33:27] "GET /styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [22/Sep/2026 11:33:27] "GET /app.js HTTP/1.1" 304 -
+127.0.0.1 - - [22/Sep/2026 12:36:40] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [22/Sep/2026 12:36:40] "GET /styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [22/Sep/2026 12:36:40] "GET /app.js HTTP/1.1" 304 -
+127.0.0.1 - - [22/Sep/2026 12:36:41] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [22/Sep/2026 12:46:22] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [22/Sep/2026 12:46:22] "GET /styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [22/Sep/2026 12:46:22] "GET /app.js HTTP/1.1" 200 -
+127.0.0.1 - - [22/Sep/2026 12:46:23] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [22/Sep/2026 12:47:02] "GET /api/questions?role=data HTTP/1.1" 200 -
